@@ -1,3 +1,3 @@
 # CV
-My CV Template
-See the PDF compiled version :)
+My CV Template.
+Check out the PDF compiled version :)
