@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<!-- Fonts!!! -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+		<!-- TODO: Style! -->
+		<style>
+			/* Get rid of the browser default styling */
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				font-family: 'Lato', sans-serif;
+    		font-family: 'Nunito', sans-serif;
+			}
+
+			/* MAKE THE BASIC LAYOUT!!! */
+			.resume {
+				display: grid;
+				grid-template-columns: 45% 1fr;
+				grid-gap: 2rem;
+				margin-top: 1rem;
+				margin-bottom: 1rem;
+				margin-right: 0.5rem;
+				margin-left:0.5rem;
+			}
+
+			/* Root styling */
+			html {
+				color: #222
+			}
+
+			/* Header styling */
+			h1 {
+				font-size: 2rem;
+			}
+
+			h2 {
+				font-size: 1.25rem;
+				text-transform: uppercase;
+				border-top: 1px solid #888;
+				border-bottom: 1px solid #888;
+				padding: 0.8rem 0;
+				margin-bottom: 2rem;
+			}
+
+			h3 {
+				font-size: 1rem;
+				text-transform: uppercase;
+			}
+
+			/* Paragraph styling */
+			p {
+				line-height: 1.5;
+				font-size: 1rem;
+			}
+
+			/* Href styling */
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+
+			/* Remove bullets from the ul */
+			ul {
+				list-style-type: none;
+			}
+
+			/* Add vertical spacing between 2 adjacent sections */
+			section + section {
+				margin-top: 2rem;
+			}
+
+			/* Make the profile image in 'me' section a circle */
+			.me img {
+				border-radius: 9999px;
+				width: 15rem;
+				height: 15rem;
+			}
+
+			/* Center everything in the 'me' section */
+			.me {
+				text-align: center;
+			}
+
+			/* Style the paragraph in the 'me' section */
+			.me p {
+				color: 888;
+				margin-bottom: 1.25rem;
+			}
+
+			/* Contact section styling */
+			.contact ul {
+				margin-top: -2rem;
+			}
+			.contact li {
+				text-align: right;
+				text-transform: uppercase;
+				padding: 1rem;
+				border-bottom: 1px solid #888;
+			}
+
+			/* Make skills section a grid of 2 */
+			.skills h3 {
+				/* color: #bababa; */
+			}
+
+			/* Make only the forst bulleted list in skills section a grid */
+			.skills > ul {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+			}
+
+			/* Timeline styling */
+			.timeline .content {
+				border-left: 1px solid #888;
+				padding-left: 1rem;
+				margin-left: 1rem;
+				margin-bottom: 0.5rem;
+			}
+
+			/* Style the duration */
+			.duration {
+				font-style: italic;
+				color: #666
+			}
+
+			/* Make the education section timeline look nice */
+			.education .timeline .event {
+				display: grid;
+				grid-template-columns: 10ch 1fr;
+			}
+
+			/* Make the experience section timeline look nice */
+			.experience .timeline .event {
+				display: grid;
+				grid-template-columns: 15ch 1fr;
+			}
+
+			/* Tweaks */
+			.profile {
+				padding-top: 1rem;
+			}
+
+			/* Tweaks */
+			.language .proficiency .event {
+				display: grid;
+				grid-template-columns: 6ch 1fr;
+			}
+
+			/* Tweaks */
+			.language .proficiency .content {
+				border-left: 1px solid #888;
+				padding-left: 1rem;
+				margin-left: 1rem;
+				margin-bottom: 0.5rem;
+			}
+
+			/* Tweaks */
+			.language .proficiency .lang {
+				color: #666;
+			}
+
+		</style>
+
+		<title>
+			CURRICULUM VITAE
+		</title>
+	</head>
+
+	<body>
+
+		<div class="resume">
+			<div class="column"> <!-- IMPORTANT!!! THE START OF THE FIRST COLUMN -->
+
+				<!-- My name and current occupation as well as a picture -->
+				<section class="me">
+					<h1>Etu- ja Sukunimi</h1>
+					<p><em>Tutkintonimike</em></p>
+					<img src="picture.jpg" width="300" height="300" alt="picture">
+				</section>
+
+				<!-- Contact information -->
+				<section class="contact">
+				<h2>Yhteystiedot</h2>
+				<ul>
+					<li>Lähiosoite, Postitoimipaikka</li>
+					<li><a href="mailto:sähköposti1@email.fi">sähköposti1@email.fi</a></li>
+					<li><a href="mailto:sähköposti1@email.fi">sähköposti2@email.fi</a></li>
+					<li>Puh. <a href="tel:+999999999999">+999999999999</li>
+					<li><a href="https://github.com">github.com/Nimi</a></li>
+				</ul>
+				</section>
+
+				<!-- More information about me -->
+				<section class="profile">
+					<h2>Profiili</h2>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</section>
+
+				<!-- Language skills -->
+				<section class="language">
+					<h2>Kielitaito</h2>
+					<ul class="proficiency">
+						<li class="event">
+							<span class="lang">Kieli 1</span>
+							<dev class="content">
+								<p><b>Taso</b></p>
+								<p>Suoritukset ja kielikurssit</p>
+							</dev>
+						</li>
+
+						<li class="event">
+							<span class="lang">Kieli 2</span>
+							<dev class="content">
+								<p><b>Taso</b></p>
+								<p>Suoritukset ja kielikurssit</p>
+							</dev>
+						</li>
+
+						<li class="event">
+							<span class="lang">Kieli 3</span>
+							<dev class="content">
+								<p><b>Taso</b></p>
+								<p>Suoritukset ja kielikurssit</p>
+							</dev>
+						</li>
+					</ul>
+				</section>
+
+			</div> <!-- IMPORTANT!!! THE END OF THE FIRST COLUMN -->
+
+			<div class="column"> <!-- IMPORTANT!!! THE START OF THE SECOND COLUMN -->
+				<!-- Education -->
+				<section class="education">
+					<h2>Koulutus</h2>
+					<ul class="timeline">
+
+						<li class="event">
+							<span class="duration">2022 - 2022</span>
+							<div class="content">
+								<h3>Koulutus 1</h3>
+								<p>Koulun nimi + lisätiedot</p>
+							</div>
+
+						<li class="event">
+							<span class="duration">2022 - 2022</span>
+							<div class="content">
+								<h3>Koulutus 2</h3>
+								<p>Koulun nimi + lisätiedot</p>
+							</div>
+
+						<li class="event">
+						<span class="duration">2022 - </span>
+							<div class="content">
+							<h3>Nykyinen tutkinto</h3>
+								<p>Korkeakoulu</p>
+								<p>Pääaine</p>
+								<p>Sivuaine</p>
+							</div>
+						</li>
+					</ul>
+				</section>
+
+				<!-- Skills -->
+				<section class="skills">
+					<h2>Taidot</h2>
+					<ul>
+						<li>
+							<h3>Yleiset</h3>
+							<ul>
+								<li class="skill">Yleistaito yksi</li>
+								<li class="skill">Yleistaito kaksi</li>
+								<li class="skill">Yleistaito kolme</li>
+								<li class="skill">Yleistaito neljä</li>
+								<li class="skill">Yleistaito viisi</li>
+							</ul>
+						</li>
+
+						<li>
+							<h3>Ohjelmointi</h3>
+							<ul>
+								<li class="skill"><b>Kieli 1</b> (kuvaus)</li>
+								<li class="skill"><b>Kieli 2</b> (kuvaus)</li>
+								<li class="skill"><b>Kieli 3</b> (kuvaus)</li>
+								<li class="skill"><b>Kieli 4</b> (kuvaus)</li>
+								<li class="skill"><b>Kieli 5</b> (kuvaus)</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<!-- Work experience in timeline format -->
+				<section class="experience">
+					<h2>Työkokemus</h2>
+					<ul class="timeline">
+
+						<li class="event">
+							<span class="duration">01.01 - 01.01/2022</span>
+							<dev class="content">
+								<h3>Työpaikka 1</h3>
+								<p>Työnimike</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</dev>
+						</li>
+
+						<li class="event">
+							<span class="duration">01.01 - 01.01/2022</span>
+							<dev class="content">
+								<h3>Työpaikka 2</h3>
+								<p>Työnimike</p>
+								<p>Habitant morbi tristique senectus et netus et malesuada fames.</p>
+							</dev>
+						</li>
+
+						<li class="event">
+							<span class="duration">01.01 - 01.01/2022</span>
+							<dev class="content">
+								<h3>Työpaikka 3</h3>
+								<p>Työnimike</p>
+								<p>Fusce id velit ut tortor pretium viverra. Aliquet bibendum enim facilisis gravida neque convallis a.</p>
+							</dev>
+						</li>
+					</ul>
+				</section>
+
+				<!-- Hobbies -->
+				<section class="hobbies">
+					<h2>Harrastukset</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada fames. Fusce id velit ut tortor pretium viverra. Aliquet bibendum enim facilisis gravida neque convallis a.</p>
+				</section>
+
+			</div> <!-- IMPORTANT!!! THE END OF THE SECOND COLUMN -->
+		</div>
+
+		<!-- TODO: 
+			ADD A FOOTNOTE THAT DESCRIBES THAT THIS DOCUMENT IS MADE WITH
+				HTML and CSS which can be found in my github
+		-->
+
+	</body>
+</html>
